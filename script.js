@@ -38,6 +38,34 @@ if(age >= 18){
 
 
 
+// Exercice boucle
+
+for(let i = 15; i >= 0; i -= 2){
+    console.log(i)
+}
+let a = 15
+
+while(a>=0){
+    console.log(a);
+    a -= 2;
+}
+
+
+
+// Exercice Tableau chercher une lettre de l'alphabet 
+
+const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+let letter = "Z";
+
+for(let i = 0; i <= alphabet.length; i++){
+    if(alphabet[i] === letter ){
+        console.log("La lettre est à la position : " + (i + 1));
+        break;
+    }
+}
+
+
 
 // Exercice 1 Objectif : Se familiariser avec les sorties dans la console.
 // Afficher "Hello, world !" dans la console.
@@ -66,7 +94,7 @@ console.log(`${nbr1 + nbr2}`);
 
 let tab = ["pomme", "cerice", "poire"];
 
-for(let i = 0; i<tab.length; i += 1){
+for(let i = 0; i<tab.length; i = i + 1){
     console.log(tab[i])
 };
 
@@ -75,7 +103,7 @@ for(let i = 0; i<tab.length; i += 1){
 // Exercice 4  Objectif : Utiliser des conditions simples et une boucle.
 // Affiche tous les nombres pairs de 1 à 20 dans la console.
 
-for(let i = 0; i <= 20; i++){
+for(let i = 0; i <= 20; i = i + 1){
     if(i % 2){
         console.log(i)
     }
@@ -89,17 +117,34 @@ for(let i = 0; i <= 20; i++){
 
 
 
-const mot = "Academia";
+const mot = "academia";
+let nbrVoyelle = 0;
+let voyelle = ["a", "i", "e", "o", "u", "y"];
 
-for(let i = 0; i = mot.length; i++){
+ for(let i = 0; i <= mot.length; i+=1){
+    for(let a = 0; a < voyelle.length; a += 1){
+        if(mot[i] === voyelle[a]){
+            nbrVoyelle += 1;
+        }
+    }
     
-}
+ }
+ console.log(`Le nombre de voyelle du mot sont de : ${nbrVoyelle}`);
+
 
 
 // Exercice 6 Objectif : Pratiquer les boucles et la manipulation des chaînes de caractères.
 // Stockez une phrase dans une constante.
 // Compte combien de fois chaque lettre apparaît dans la phrase.
 // Affiche chaque lettre avec son nombre d’occurrences (par exemple, "a : 3 fois").
+
+
+const str = "Salut Tout le Monde";
+let times = 0;
+let lettre ="";
+for(let i = 0; i < str.length; i += 1){
+
+}
 
 
 
