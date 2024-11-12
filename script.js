@@ -54,16 +54,52 @@ while(a>=0){
 
 // Exercice Tableau chercher une lettre de l'alphabet 
 
-const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+// function FindLetterPositionInAlphabet(letter){
+//     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//     for(let i = 0; i <= alphabet.length; i++){
+//         if(alphabet[i] === letter ){
+//             return"La lettre est à la position : " + (i + 1);  
+//         }
+//     }
+// }
 
-let letter = "Z";
+// console.log(FindLetterPositionInAlphabet("D"));
 
-for(let i = 0; i <= alphabet.length; i++){
-    if(alphabet[i] === letter ){
-        console.log("La lettre est à la position : " + (i + 1));
-        break;
+
+function findLetterPositionInAlphabet(letter){
+    const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  
+    for(let index = 0; index < 26; index = index + 1){
+  
+      if(alphabet[index] === letter){
+        return "J'ai trouvé la lettre " + letter + ", c'est la " + (index+1) + " ème lettre de l'alphabet"; 
+      }
     }
-}
+  }
+  
+  
+  console.log(findLetterPositionInAlphabet("D"));
+  console.log(findLetterPositionInAlphabet("S"));
+  console.log(findLetterPositionInAlphabet("Y"));
+
+
+
+// Exercice fonction longueur largeur
+
+function SurfaceRectangle(longueur, largeur){
+    let resultat ="";
+    if(longueur === largeur){
+        resultat = resultat + "c'est un carré ";
+    } else {
+        resultat = resultat + "c'est un rectangle ";
+    }
+    return resultat + "et sa surface est de " + (largeur * longueur);
+    
+    
+};
+
+console.log(SurfaceRectangle(2,2));
+
 
 
 
