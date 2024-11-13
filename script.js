@@ -140,7 +140,7 @@ for(let i = 0; i<tab.length; i = i + 1){
 // Affiche tous les nombres pairs de 1 à 20 dans la console.
 
 for(let i = 0; i <= 20; i = i + 1){
-    if(i % 2){
+    if(i % 2 === 0){
         console.log(i)
     }
 };
@@ -153,19 +153,27 @@ for(let i = 0; i <= 20; i = i + 1){
 
 
 
-const mot = "academia";
-let nbrVoyelle = 0;
-let voyelle = ["a", "i", "e", "o", "u", "y"];
+// const mot = "academia";
+// let nbrVoyelle = 0;
+// let voyelle = ["a", "i", "e", "o", "u", "y"];
 
- for(let i = 0; i <= mot.length; i+=1){
-    for(let a = 0; a < voyelle.length; a += 1){
-        if(mot[i] === voyelle[a]){
-            nbrVoyelle += 1;
-        }
-    }
+//   for(let i = 0; i <= mot.length; i+=1){
+//      for(let a = 0; a < voyelle.length; a += 1){
+//          if(mot[i] === voyelle[a]){
+//              nbrVoyelle += 1;
+//          }
+//      }
     
- }
- console.log(`Le nombre de voyelle du mot sont de : ${nbrVoyelle}`);
+//   }
+//   console.log(`Le nombre de voyelle du mot sont de : ${nbrVoyelle}`);
+
+
+const mot = "academi";
+const voyele = /[aeiouy]/g;
+const tout = mot.match(voyele);
+
+console.log(`Le nombre de voyelle de ${mot} est de :  ${tout.length}`)
+
 
 
 
@@ -175,12 +183,35 @@ let voyelle = ["a", "i", "e", "o", "u", "y"];
 // Affiche chaque lettre avec son nombre d’occurrences (par exemple, "a : 3 fois").
 
 
-const str = "Salut Tout le Monde";
-let times = 0;
-let lettre ="";
-for(let i = 0; i < str.length; i += 1){
 
+
+
+const string = "hellooo";
+
+const lettres = /[a-z]/g;
+let mots = string.match(lettres);
+
+for(let i = 0; i < string.length; i = i + 1){
+    
+    if(mots[i]<1){
+        mots[i] += 1;
+    }
 }
+
+console.log(mots);
+
+// const redondance = {
+// }
+
+// for(let i = 0; i < string.length; i = i +1){
+//     redondance[string[i]] = 0;
+//     if(redondance[string[i]] <= 0 ){
+//         redondance[string[i]] = 1;
+//     } else {
+//         redondance[string[i]] += 1;
+//     }
+// }
+// console.log(redondance)
 
 
 
@@ -194,9 +225,44 @@ for(let i = 0; i < str.length; i += 1){
 
 
 
+ let tabl = ["3", "-3", "5", "-1", "2", "-8", "-10", "9"];
+ let posi =[];
+ let nega = [];
+
+ for(let i = 0; i < tabl.length; i++){
+     if(tabl[i] < 0){
+         nega.push(tabl[i]);
+     } else {
+         posi.push(tabl[i]);
+     }
+ }
+ console.log(nega);
+ console.log(posi);
+
+
+
+
+
+
 // Exercice 8 Objectif : Utiliser des boucles et des conditions pour trouver une valeur.
 // Saisissez une liste de 5 nombres.
 // Parcoure cette liste pour déterminer et afficher le plus grand nombre.
+
+
+
+
+
+// let nombres = [5, 3, 40, 10, 8];
+// let PlusGrandNombre = "";
+// for(let i = 0; i < nombres.length; i++){
+//     if(nombres[i] >= PlusGrandNombre){
+//         PlusGrandNombre = nombres[i];
+//     }
+// }
+
+// console.log(PlusGrandNombre);
+
+
 
 
 
@@ -206,3 +272,17 @@ for(let i = 0; i < str.length; i += 1){
 // Exercice 9 Objectif : Utiliser les boucles et les manipulations de chaînes.
 // Saisissez un mot.
 // Affiche ce mot en inversant l'ordre des lettres (par exemple, "bonjour" deviendrait "ruojnob").
+
+
+
+
+ let chaine = "SalutToutLeMonde";
+ let inverse = "";
+
+
+ for(let i = chaine.length-1; i >= 0; i-- ){
+        inverse += chaine[i];
+ }
+ console.log(inverse);
+
+
